@@ -2,7 +2,7 @@ import { Customer, Movie, Rental } from "../../src/first-example";
 
 const assert = chai.assert;
 
-suite('greeting', () => {
+suite('first-example', () => {
 
   const movieCommando = new Movie('コマンドー', Movie.REGULAR);
   const movieStandByMe = new Movie('スタンド・バイ・ミー', Movie.REGULAR);
