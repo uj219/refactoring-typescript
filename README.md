@@ -1,4 +1,4 @@
-# typescript-simple-project
+# refactoring-typescript
 
 ## 環境構築
 
