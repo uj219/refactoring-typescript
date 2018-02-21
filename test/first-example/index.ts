@@ -17,7 +17,7 @@ suite('first-example', () => {
   teardown(() => {
   });
 
-  test('statement(): ', () => {
+  test('statement(): 出力される明細内容の検証', () => {
     // ｢桜木 花道｣が｢コマンドー｣と｢君の名は。｣を｢7日間｣レンタルする
     sakuragi.addRental(new Rental(movieCommando, 7));
     sakuragi.addRental(new Rental(movieYourName, 7));
