@@ -47,7 +47,7 @@ module.exports = {
   },
   plugins: [
     new webpack.IgnorePlugin(/vertx/),
-    // webpackでバンドルされたファイル(app.bundle.js)のscriptタグを
+    // webpackでバンドルされたファイル(index.bundle.js)のscriptタグを
     // 指定したhtmlに自動で埋め込んでくれるプラグイン
     new HtmlWebpackPlugin({
       filename: 'public/index.html',
