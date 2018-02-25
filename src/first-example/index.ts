@@ -12,7 +12,7 @@ export class Movie {
     this._priceCode = priceCode;
   }
 
-  public get priceCode() {
+  public get priceCode(): number {
     return this._priceCode
   }
 
@@ -61,7 +61,7 @@ export class Customer {
     this._rentals.push(arg);
   }
 
-  public get name() {
+  public get name(): string {
     return this._name;
   }
 
