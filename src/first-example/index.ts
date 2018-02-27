@@ -1,8 +1,7 @@
 export class Movie {
-
-  public static readonly CHILDREN: number = 2;
-  public static readonly REGULAR: number = 0;
-  public static readonly NEW_RELEASE: number = 1;
+  static readonly CHILDREN: number = 2;
+  static readonly REGULAR: number = 0;
+  static readonly NEW_RELEASE: number = 1;
 
   private _title: string;
   private _priceCode: number;
@@ -12,23 +11,21 @@ export class Movie {
     this._priceCode = priceCode;
   }
 
-  public get priceCode(): number {
+  get priceCode(): number {
     return this._priceCode
   }
 
-  public set priceCode(value: number) {
+  set priceCode(value: number) {
     this._priceCode = value;
   }
 
-  public get title(): string {
+  get title(): string {
     return this._title;
   }
-
 }
 
 
 export class Rental {
-
   private _movie: Movie;
   private _daysRented: number;
 
@@ -37,19 +34,17 @@ export class Rental {
     this._daysRented = daysRented;
   }
 
-  public get daysRented(): number {
+  get daysRented(): number {
     return this._daysRented;
   }
 
-  public get movie(): Movie {
+  get movie(): Movie {
     return this._movie;
   }
-
 }
 
 
 export class Customer {
-
   private _name: string;
   private _rentals: Rental[] = [];
 
@@ -57,15 +52,15 @@ export class Customer {
     this._name = name;
   }
 
-  public addRental(arg: Rental): void {
+  addRental(arg: Rental): void {
     this._rentals.push(arg);
   }
 
-  public get name(): string {
+  get name(): string {
     return this._name;
   }
 
-  public statement(): string {
+  statement(): string {
     let totalAmount = 0;
     let frequentRenterPoints = 0;
     let result = `Rental Record for ${this.name}\n`;
@@ -104,5 +99,4 @@ export class Customer {
     result += `You earned ${frequentRenterPoints} frequent renter points`;
     return result;
   }
-
 }
