@@ -7,6 +7,8 @@
 // 疑問点
 // - constructor は private になるときあるのか?
 // - enum の使い方 Javaの Enumeration との比較
+// - private _rentals: Rental[] = []; の型のところがよくわからなかったので、回答見てしまった。
+//   この場合は Rentalインスタンスの配列という意味になるのか、キャスト不要でいいんだよね？
 
 export class Movie {
     public static CHILDRENS: number = 2;
@@ -73,7 +75,7 @@ export class Customer {
         let frequentRenterPoints: number = 0;
         let result = "Rental Record for " + this.name + "\n";
 
-        for (let rental of this._rentals) {
+        for (const rental of this._rentals) {
             let thisAmount = 0;
             const each: Rental = rental;
 
